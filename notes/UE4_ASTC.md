@@ -33,6 +33,8 @@ virtual bool CompressImage(
 		FCompressedImage2D& OutCompressedImage
 		) const override
 {
+// 
+FMultithreadedCompression<FASTCEncoderSettings>::Compress(MultithreadSettings, EncoderSettings, Image, OutCompressedImage, &IntelASTCCompressScans, bUseTasks);
 }
 
 static void IntelASTCCompressScans(FASTCEncoderSettings* pEncSettings, FImage* pInImage, FCompressedImage2D* pOutImage, int yStart, int yEnd, int SliceIndex)
