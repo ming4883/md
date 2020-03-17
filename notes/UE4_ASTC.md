@@ -20,3 +20,5 @@ virtual void GetTextureFormats(const UTexture* Texture, TArray< TArray<FName> >&
     // Other code...
 	}
 ```
+
+D:\Sandbox\UnrealEngine\Engine\Source\Developer\TextureFormatASTC\Private\TextureFormatASTC.cpp
