@@ -41,3 +41,22 @@ static void IntelASTCCompressScans(FASTCEncoderSettings* pEncSettings, FImage* p
 {
 }
 ```
+
+Engine\Source\Developer\TextureFormatASTC\Private\TextureFormatASTC.cpp
+```
+class FTextureFormatASTC : public ITextureFormat
+{
+	virtual bool CompressImage(
+			const FImage& InImage,
+			const struct FTextureBuildSettings& BuildSettings,
+			bool bImageHasAlphaChannel,
+			FCompressedImage2D& OutCompressedImage
+		) const override
+	{
+#if SUPPORTS_ISPC_ASTC
+		// Route ASTC compression work to the ISPC module instead.
+		return IntelISPCTexCompFormat.CompressImage(InImage, BuildSettings, bImageHasAlphaChannel, OutCompressedImage);
+#endif
+	}
+};
+```
