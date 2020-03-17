@@ -22,3 +22,20 @@ virtual void GetTextureFormats(const UTexture* Texture, TArray< TArray<FName> >&
 ```
 
 D:\Sandbox\UnrealEngine\Engine\Source\Developer\TextureFormatASTC\Private\TextureFormatASTC.cpp
+
+D:\Sandbox\UnrealEngine\Engine\Source\Developer\TextureFormatIntelISPCTexComp\Private\TextureFormatIntelISPCTexComp.cpp
+
+```
+virtual bool CompressImage(
+		const FImage& InImage,
+		const struct FTextureBuildSettings& BuildSettings,
+		bool bImageHasAlphaChannel,
+		FCompressedImage2D& OutCompressedImage
+		) const override
+{
+}
+
+static void IntelASTCCompressScans(FASTCEncoderSettings* pEncSettings, FImage* pInImage, FCompressedImage2D* pOutImage, int yStart, int yEnd, int SliceIndex)
+{
+}
+```
