@@ -60,3 +60,14 @@ class FTextureFormatASTC : public ITextureFormat
 	}
 };
 ```
+
+Engine\Source\ThirdParty\IntelISPCTexComp\ispc_texcomp\ispc_texcomp_astc.cpp
+
+```
+// ~499
+void CompressBlocksASTC(const rgba_surface* src, uint8_t* dst, astc_enc_settings* settings)
+{
+}
+```
+
+
