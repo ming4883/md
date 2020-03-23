@@ -30,3 +30,12 @@ FMaterialPixelParameters GetMaterialPixelParameters(FVertexFactoryInterpolantsVS
 	Result.LayerWeights.w = 0; // Total weight need to be 1
 }
 ```
+
+UMaterialExpressionLandscapeLayerBlend
+
+```
+class FHLSLMaterialTranslator
+virtual int32 StaticTerrainLayerWeight(FName ParameterName,int32 Default) override
+{
+}
+```
