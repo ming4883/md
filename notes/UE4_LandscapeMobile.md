@@ -6,6 +6,19 @@ FLandscapeComponentSceneProxyMobile
 
 Source\Runtime\Landscape\Private\LandscapeRender.cpp
 
+```
+void FLandscapeComponentSceneProxy::OnTransformChanged()
+{
+}
+
+// InComponent : ULandscapeComponent
+// FLandscapeComponentSceneProxyMobile::FLandscapeComponentSceneProxyMobile()
+{
+	WeightmapTextures = InComponent->MobileWeightmapTextures;
+	NormalmapTexture = InComponent->MobileWeightmapTextures[0];
+}
+```
+
 
 Shaders\Private\LandscapeVertexFactory.ush
 
