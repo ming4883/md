@@ -6,3 +6,8 @@ FSceneRenderer::InitDynamicShadows()
   - // invoke
     - FProjectedShadowInfo::AddSubjectPrimitive()
       - MobileCSMSubjectPrimitives.AddSubjectPrimitive() : FMobileCSMSubjectPrimitives
+      
+- FMobileSceneRenderer::BuildCSMVisibilityState()
+  - VisibleLightInfo.ShadowsToProject.Add(ProjectedShadowInfo);
+
+- Used by FSceneRenderer::RenderShadowProjections()
