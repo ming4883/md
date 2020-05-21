@@ -11,3 +11,7 @@ FSceneRenderer::InitDynamicShadows()
   - VisibleLightInfo.ShadowsToProject.Add(ProjectedShadowInfo);
 
 - FProjectedShadowInfo::RenderDepth()
+
+- FMobileSceneRenderer::Render()
+  - FMobileSceneRenderer::RenderShadowDepthMaps()
+    - FMobileSceneRenderer::RenderShadowDepthMapAtlases()
