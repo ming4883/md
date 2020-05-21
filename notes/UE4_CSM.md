@@ -10,4 +10,4 @@ FSceneRenderer::InitDynamicShadows()
 - FMobileSceneRenderer::BuildCSMVisibilityState()
   - VisibleLightInfo.ShadowsToProject.Add(ProjectedShadowInfo);
 
-- Used by FSceneRenderer::RenderShadowProjections()
+- FProjectedShadowInfo::RenderDepth()
