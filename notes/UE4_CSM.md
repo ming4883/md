@@ -15,3 +15,5 @@ FSceneRenderer::InitDynamicShadows()
 - FMobileSceneRenderer::Render()
   - FMobileSceneRenderer::RenderShadowDepthMaps()
     - FMobileSceneRenderer::RenderShadowDepthMapAtlases()
+    - FProjectedShadowInfo::RenderDepthInner()
+      - ShadowDepthPass.DispatchDraw(nullptr, RHICmdList);
