@@ -1,3 +1,4 @@
+// Gather primitives
 FSceneRenderer::InitDynamicShadows()
 - // store shadow geometies
   - FGatherShadowPrimitivesPacket::ViewDependentWholeSceneShadowSubjectPrimitives;
@@ -10,10 +11,11 @@ FSceneRenderer::InitDynamicShadows()
 - FMobileSceneRenderer::BuildCSMVisibilityState()
   - VisibleLightInfo.ShadowsToProject.Add(ProjectedShadowInfo);
 
-- FProjectedShadowInfo::RenderDepth()
+// Rendering
 
 - FMobileSceneRenderer::Render()
   - FMobileSceneRenderer::RenderShadowDepthMaps()
     - FMobileSceneRenderer::RenderShadowDepthMapAtlases()
     - FProjectedShadowInfo::RenderDepthInner()
+      - BeginShadowRenderPass (lambda) // set up render target
       - ShadowDepthPass.DispatchDraw(nullptr, RHICmdList);
