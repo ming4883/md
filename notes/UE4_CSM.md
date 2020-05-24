@@ -17,5 +17,8 @@ FSceneRenderer::InitDynamicShadows()
   - FMobileSceneRenderer::RenderShadowDepthMaps()
     - FMobileSceneRenderer::RenderShadowDepthMapAtlases()
     - FProjectedShadowInfo::RenderDepthInner()
+      - RenderTarget  
+        // const FSortedShadowMapAtlas& ShadowMapAtlas = SortedShadowsForShadowDepthPass.ShadowMapAtlases[AtlasIndex];
+		    //FSceneRenderTargetItem& RenderTarget = ShadowMapAtlas.RenderTargets.DepthTarget->GetRenderTargetItem();
       - BeginShadowRenderPass (lambda) // set up render target
       - ShadowDepthPass.DispatchDraw(nullptr, RHICmdList);
