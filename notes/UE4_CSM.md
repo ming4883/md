@@ -1,4 +1,4 @@
-// Gather primitives
+# Primitives Gathering
 FSceneRenderer::InitDynamicShadows()
 - // store shadow geometies
   - FGatherShadowPrimitivesPacket::ViewDependentWholeSceneShadowSubjectPrimitives;
@@ -11,7 +11,7 @@ FSceneRenderer::InitDynamicShadows()
 - FMobileSceneRenderer::BuildCSMVisibilityState()
   - VisibleLightInfo.ShadowsToProject.Add(ProjectedShadowInfo);
 
-// Rendering
+# Rendering
 
 - FMobileSceneRenderer::Render()
   - FMobileSceneRenderer::RenderShadowDepthMaps()
@@ -23,14 +23,16 @@ FSceneRenderer::InitDynamicShadows()
       - BeginShadowRenderPass (lambda) // set up render target
       - ShadowDepthPass.DispatchDraw(nullptr, RHICmdList);
 
-// Allocate
+# Allocate
+
 - FSceneRenderer::AllocateCSMDepthTargets()
-- ```
+```
 FIntPoint WholeSceneAtlasSize(CurrentLayout.TextureLayout.GetSizeX(), CurrentLayout.TextureLayout.GetSizeY());
 FPooledRenderTargetDesc WholeSceneShadowMapDesc2D(FPooledRenderTargetDesc::Create2DDesc(WholeSceneAtlasSize, PF_ShadowDepth, FClearValueBinding::DepthOne, TexCreate_None, TexCreate_DepthStencilTargetable, false));
 WholeSceneShadowMapDesc2D.Flags |= GFastVRamConfig.ShadowCSM;
 GRenderTargetPool.FindFreeElement(RHICmdList, WholeSceneShadowMapDesc2D, ShadowMapAtlas.RenderTargets.DepthTarget, GetCSMRenderTargetName(LayoutIndex));
 ```
 
-// Projection
+# Projection
 
+FProjectedShadowInfo::SetupWholeSceneProjection()
