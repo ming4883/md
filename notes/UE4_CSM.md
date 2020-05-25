@@ -35,4 +35,6 @@ GRenderTargetPool.FindFreeElement(RHICmdList, WholeSceneShadowMapDesc2D, ShadowM
 
 # Projection
 
-FProjectedShadowInfo::SetupWholeSceneProjection()
+- FProjectedShadowInfo::SetupWholeSceneProjection()
+  - FDirectionalLightSceneProxy::GetShadowSplitBounds()
+    - FDirectionalLightSceneProxy::GetShadowSplitBoundsDepthRange()
