@@ -1,15 +1,9 @@
 # Primitives Gathering
 FSceneRenderer::InitDynamicShadows()
-- // store shadow geometies
-  - FGatherShadowPrimitivesPacket::ViewDependentWholeSceneShadowSubjectPrimitives;
-- // submit
-  - FGatherShadowPrimitivesPacket::RenderThreadFinalize()
-  - // invoke
-    - FProjectedShadowInfo::AddSubjectPrimitive()
-      - MobileCSMSubjectPrimitives.AddSubjectPrimitive() : FMobileCSMSubjectPrimitives
-      
-- FMobileSceneRenderer::BuildCSMVisibilityState()
-  - VisibleLightInfo.ShadowsToProject.Add(ProjectedShadowInfo);
+- FSceneRenderer::GatherShadowDynamicMeshElements()
+  - FProjectedShadowInfo::GatherDynamicMeshElements()
+    - SetupMeshDrawCommandsForShadowDepth()
+    - // ShadowDepthPassVisibleCommands : FMeshCommandOneFrameArray
 
 # Rendering
 
