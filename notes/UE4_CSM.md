@@ -1,5 +1,8 @@
 # Primitives Gathering
 FSceneRenderer::InitDynamicShadows()
+- FSceneRenderer::GatherShadowPrimitives()
+  - FProjectedShadowInfo::ShouldDrawStaticMeshes()
+    - ShadowDepthPassVisibleCommands.Add()
 - FSceneRenderer::GatherShadowDynamicMeshElements()
   - FProjectedShadowInfo::GatherDynamicMeshElements()
     - SetupMeshDrawCommandsForShadowDepth()
