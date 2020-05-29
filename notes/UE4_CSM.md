@@ -5,9 +5,9 @@ FSceneRenderer::InitDynamicShadows()
     - ShadowDepthPassVisibleCommands.Add()
 - FSceneRenderer::GatherShadowDynamicMeshElements()
   - FProjectedShadowInfo::GatherDynamicMeshElements()
-    - SetupMeshDrawCommandsForShadowDepth()
-    - // ShadowDepthPassVisibleCommands : FMeshCommandOneFrameArray
-
+    - GatherDynamicMeshElementsArray() // dynamics primitvies
+    - SetupMeshDrawCommandsForShadowDepth() // static meshes
+    
 # Rendering
 
 - FMobileSceneRenderer::Render()
