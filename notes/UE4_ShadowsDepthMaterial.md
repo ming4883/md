@@ -33,3 +33,4 @@ const float DepthBias = SlopeBias + ConstantDepthBias;
 ```
 
 FProjectedShadowInfo::ShadowDepthPassUniformBuffer.UpdateUniformBufferImmediate(ShadowDepthPassParameters);
+SetupMeshDrawCommandsForShadowDepth(Renderer, PassUniformBuffer);
