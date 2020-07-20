@@ -1,3 +1,4 @@
+# Shadow Depths
 FShadowDepthPassMeshProcessor::AddMeshBatch
 
 
@@ -34,3 +35,7 @@ const float DepthBias = SlopeBias + ConstantDepthBias;
 
 FProjectedShadowInfo::ShadowDepthPassUniformBuffer.UpdateUniformBufferImmediate(ShadowDepthPassParameters);
 SetupMeshDrawCommandsForShadowDepth(Renderer, PassUniformBuffer);
+
+# Material Instance
+
+UMaterialInstance::UpdatePermutationAllocations
