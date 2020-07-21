@@ -39,3 +39,7 @@ SetupMeshDrawCommandsForShadowDepth(Renderer, PassUniformBuffer);
 # Material Instance
 
 UMaterialInstance::UpdatePermutationAllocations
+
+# Base Pass Material
+
+GetUniformMobileBasePassShaders<>()
