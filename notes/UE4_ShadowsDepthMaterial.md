@@ -43,3 +43,4 @@ UMaterialInstance::UpdatePermutationAllocations
 # Base Pass Material
 
 GetUniformMobileBasePassShaders<>()
+TMobileBasePassPS<>
