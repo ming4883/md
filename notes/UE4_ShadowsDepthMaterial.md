@@ -45,3 +45,15 @@ UMaterialInstance::UpdatePermutationAllocations
 * GetUniformMobileBasePassShaders<>()
 * TMobileBasePassPS<>
 * TMobileBasePassPSPolicyParamType<>
+
+# Compute depth bias in shader
+```
+const float MaxSlopeDepthBias = ShadowDepthBiasInfo.z;
+const float Slope = clamp(abs(NoL) > 0 ? sqrt(saturate(1 - NoL*NoL)) / NoL : MaxSlopeDepthBias, 0, MaxSlopeDepthBias);
+
+const float SlopeDepthBias = ShadowDepthBiasInfo.y;
+const float SlopeBias = SlopeDepthBias * Slope;
+
+const float ConstantDepthBias = ShadowDepthBiasInfo.x;
+const float DepthBias = SlopeBias + ConstantDepthBias;
+```
