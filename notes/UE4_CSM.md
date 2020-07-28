@@ -35,3 +35,6 @@ GRenderTargetPool.FindFreeElement(RHICmdList, WholeSceneShadowMapDesc2D, ShadowM
 - FProjectedShadowInfo::SetupWholeSceneProjection()
   - FDirectionalLightSceneProxy::GetShadowSplitBounds()
     - FDirectionalLightSceneProxy::GetShadowSplitBoundsDepthRange()
+
+# Setup
+- FSceneRenderer::InitDynamicShadows(RHICmdList, DynamicIndexBuffer, DynamicVertexBuffer, DynamicReadBuffer);
