@@ -38,3 +38,6 @@ GRenderTargetPool.FindFreeElement(RHICmdList, WholeSceneShadowMapDesc2D, ShadowM
 
 # Setup
 - FSceneRenderer::InitDynamicShadows(RHICmdList, DynamicIndexBuffer, DynamicVertexBuffer, DynamicReadBuffer);
+  - // Gathers the list of primitives used to draw various shadow types <br/>GatherShadowPrimitives(PreShadows, ViewDependentWholeSceneShadowsThatNeedCulling, bStaticSceneOnly);
+  - AllocateShadowDepthTargets(RHICmdList);
+  - // Generate mesh element arrays from shadow primitive arrays<br/>GatherShadowDynamicMeshElements(DynamicIndexBuffer, DynamicVertexBuffer, DynamicReadBuffer);
